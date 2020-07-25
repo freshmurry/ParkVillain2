@@ -76,6 +76,6 @@ gem 'capistrano'
 
 # Use PostgreSQL as the database for Active Record
 group :production do
-  gem 'pg', '0.18.2'
+  gem 'pg', '0.20'
   gem 'rails_12factor'
 end

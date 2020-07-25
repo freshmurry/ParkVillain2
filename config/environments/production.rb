@@ -73,9 +73,6 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-  
-  config.web_socket_server_url = "wss://parkvillain.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://parkvillain.herokuapp.com/cable', 'https://parkvillain.herokuapp.com/cable' ]
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false

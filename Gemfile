@@ -5,8 +5,9 @@ ruby '2.1.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
 gem 'rails', '4.2.1'
-# Use PostgreSQL as the database for Active Record
-gem 'pg'
+
+gem 'sqlite3', '1.3.13'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -51,3 +52,7 @@ group :development, :test do
 
 end
 
+# Use PostgreSQL as the database for Active Record
+group :production do
+  gem 'pg', '0.18.2'
+end

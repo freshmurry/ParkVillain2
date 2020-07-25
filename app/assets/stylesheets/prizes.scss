@@ -39,7 +39,7 @@
 
 #prizes .prize-number {
     color: inherit;
-    border-radius: 50%;
+    // border-radius: 50%;
     position: absolute;
     top: -60px;
     width: 30px;
@@ -64,7 +64,7 @@
 }
 
 #prizes .active-prize .prize-number{
-    background: #2ecc71;
+    background: #2ECC71;
     color: white;
 }
 
@@ -128,13 +128,13 @@
     #prizes img{
       display: block;
       position: static;
+    //   width: 100%;
+    //   height: 100%;
     }
 
     #prizes .prize:first-child{
         margin-left: 0;
     }
-
-
 
     #prizes{
       margin-bottom: 0;
@@ -149,6 +149,5 @@
         margin: 50px 20px;
       width: calc(100% - 40px);
     }
-
 
 }

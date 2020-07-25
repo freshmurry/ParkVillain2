@@ -13,15 +13,12 @@
 
 ActiveRecord::Schema.define(version: 20151125171932) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "admins", force: :cascade do |t|
     t.string "email",              default: "", null: false
     t.string "encrypted_password", default: "", null: false
   end
 
-  add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
+  add_index "admins", ["email"], name: "index_admins_on_email", unique: true
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer  "priority",   default: 0, null: false
@@ -37,7 +34,7 @@ ActiveRecord::Schema.define(version: 20151125171932) do
     t.datetime "updated_at"
   end
 
-  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority"
 
   create_table "prizes", force: :cascade do |t|
     t.string   "name",                            null: false
@@ -93,7 +90,7 @@ ActiveRecord::Schema.define(version: 20151125171932) do
     t.datetime "updated_at",     null: false
   end
 
-  add_index "shares", ["user_id"], name: "index_shares_on_user_id", using: :btree
+  add_index "shares", ["user_id"], name: "index_shares_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",         null: false
@@ -104,7 +101,7 @@ ActiveRecord::Schema.define(version: 20151125171932) do
     t.datetime "updated_at",    null: false
   end
 
-  add_index "users", ["ip_address"], name: "index_users_on_ip_address", using: :btree
-  add_index "users", ["referrer_id"], name: "index_users_on_referrer_id", using: :btree
+  add_index "users", ["ip_address"], name: "index_users_on_ip_address"
+  add_index "users", ["referrer_id"], name: "index_users_on_referrer_id"
 
 end

@@ -1,6 +1,6 @@
-%title Prelauncher
-%meta{:content => "", :name => "Description"}/
-%meta{:content => "", :name => "Keywords"}/
+%title ParkVillain
+%meta{:content => "ParkVillain is reinventing parking. Get in on the action.", :name => "Description"}/
+%meta{:content => "Parking, Parking Space, Book Parking, Parking Space Rental", :name => "Keywords"}/
 
 %link{:href => asset_path('favicon.ico'), :rel => "shortcut icon", :type => "image/x-icon"}/
 %link{:href => asset_path('favicon.ico'), :rel => "apple-touch-icon", :type => "image/jpeg"}/
@@ -20,16 +20,10 @@
 - else
 	%meta{:content => request.original_url, :property => "og:url"}/
 
-// Google +
-%meta{:content => Setting.sharing["google_plus_title"], :itemprop => "name"}/
-%meta{:content => Setting.sharing["google_plus_message"], :itemprop => "description"}/
-- if Setting.google_plus_image.present?
-	%meta{:content => root_url + Setting.google_plus_image.url, :itemprop => "image"}/
-
-
+// Twitter
 %meta{:content => "summary_large_image", :name => "twitter:card"}/
-%meta{:content => "@Prelaunchr", :name => "twitter:site"}/
-%meta{:content => "Prelauncher", :name => "twitter:title"}/
+%meta{:content => "@ParkVillain", :name => "twitter:site"}/
+%meta{:content => "ParkVillain", :name => "twitter:title"}/
 %meta{:content => Setting.sharing["twitter_message"], :name => "twitter:description"}/
 %meta{:content => root_url, :name => "twitter:domain"}/
 - if Setting.twitter_image.present?

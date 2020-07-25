@@ -30,11 +30,9 @@ development:
   adapter: sqlite3
   database: parkvillain_development
   host: localhost
-  username: freshmurry
-  password: password
 
 test:
-  adapter: postgresql
+  adapter: sqlite3
   database: parkvillain_test
   host: localhost
   
@@ -42,5 +40,3 @@ production:
   adapter: postgresql
   database: parkvillain_production
   host: localhost
-  username: freshmurry
-  password: password

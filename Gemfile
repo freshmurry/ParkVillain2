@@ -1,11 +1,13 @@
 source 'https://rubygems.org'
-ruby '2.4.2'
+
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
 gem 'rails', '4.2.1'
-
-gem 'sqlite3', '1.3.13'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -38,7 +40,7 @@ gem 'delayed_job_active_record'
 # Load twitter bootstrap CSS, JavaSript files
 gem 'bootstrap-sass'
 
-gem 'rails_12factor', group: :production
+# gem 'rails_12factor', group: :production
 
 # Font-Awesome web fonts and stylesheets http://fortawesome.github.io/Font-Awesome/icons/
 gem "font-awesome-rails"
@@ -46,6 +48,14 @@ gem "paperclip"
 
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
+
+group :development do
+  gem 'sqlite3', '~> 1.3.13'
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '~> 3.0.5'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+end
 
 group :development, :test do
   gem 'pry'

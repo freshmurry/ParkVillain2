@@ -34,7 +34,7 @@ gem 'simple_form'
 # User authentication 
 gem 'devise'
 
-gem 'unicorn'
+gem 'puma'
 gem 'rack-timeout'
 
 gem 'delayed_job_active_record'
